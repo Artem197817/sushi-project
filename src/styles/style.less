@@ -203,20 +203,21 @@ h2 {
         position: absolute;
         left: -5%;
         top: 181px;
-
+        animation: moveUpDown 3s linear infinite;
       }
 
       .title-leaf {
         position: absolute;
         top: -219px;
         left: 44%;
+        animation: moveUpDown 5s linear infinite;
       }
 
       .title-sushi {
         position: absolute;
         top: 274px;
         left: 46%;
-
+        animation: moveUpDown 4s linear infinite;
       }
     }
 
@@ -225,14 +226,17 @@ h2 {
 
 .advantages {
   .advantages-container {
-    padding-bottom: 60px;
+    padding-bottom: 100px;
+    position: relative;
 
     .advantages-title {
       margin-bottom: 60px;
     }
 
     .advantages-block {
-      .flex-center-between;
+      display: flex;
+      align-items: center;
+
 
       .advantages-image {
         display: flex;
@@ -241,7 +245,8 @@ h2 {
         .advantages-image-block {
           .flex-center-between;
           margin-top: 30px;
-          img{
+
+          img {
 
             height: 322px;
           }
@@ -249,14 +254,19 @@ h2 {
       }
 
       .advantages-info {
+        box-sizing: border-box;
+        height: 659px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         flex-direction: column;
+        margin-left: 95px;
 
         .advantage {
           display: flex;
           position: relative;
+          height: 199px;
+          align-items: flex-end;
 
           .advantage-number {
             font-family: var(--second-family);
@@ -265,11 +275,19 @@ h2 {
             line-height: 0.8;
             color: var(--primary-color);
             opacity: 0.2;
+            position: relative;
+            top: -90px;
           }
 
           .advantage-info {
             width: 374px;
             box-sizing: border-box;
+            position: relative;
+            left: -70px;
+
+            &.one {
+              left: -23px;
+            }
 
             .advantage-info-title {
               font-family: var(--font-family);
@@ -281,7 +299,6 @@ h2 {
               margin-bottom: 20px;
               width: 310px;
               position: relative;
-              top: 0px;
               box-sizing: border-box;
             }
 
@@ -298,5 +315,256 @@ h2 {
 
       }
     }
+
+    .advantage-shrimp {
+      position: absolute;
+      top: 245px;
+      left: 91%;
+      animation: moveUpDown 3s linear infinite;
+    }
+
+    .advantage-leaf {
+      position: absolute;
+      top: 300px;
+      left: -13%;
+      animation: moveUpDown 4s linear infinite;
+    }
+
+    .advantage-sushi {
+      position: absolute;
+      top: 635px;
+      left: 38%;
+      animation: moveUpDown 5s linear infinite;
+    }
+  }
+}
+
+.products {
+  .product-container {
+    padding: 70px 0;
+    .flex-center-center;
+    flex-direction: column;
+
+    .products-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .products-menu {
+      text-align: center;
+      margin-bottom: 50px;
+
+      ul {
+        width: 447px;
+        box-sizing: border-box;
+        .flex-center-between;
+        list-style: none;
+
+        .products-menu-item {
+          .products-menu-link {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-decoration-skip-ink: none;
+            color: var(--white);
+            border-bottom: 1px solid var(--black);
+
+            &:hover {
+              border-bottom: 1px solid var(--white);
+            }
+          }
+        }
+      }
+    }
+
+    .products-block {
+      .flex-center-between;
+      flex-wrap: wrap;
+
+      .product {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        .product-title-block {
+          .flex-center-between;
+
+
+          .product-title {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-top: 13px;
+            margin-bottom: 5px;
+          }
+
+          .product-count {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 150%;
+            text-transform: uppercase;
+            color: var(--white);
+          }
+        }
+
+        .product-text {
+          font-family: var(--font-family);
+          font-weight: 400;
+          font-size: 16px;
+          color: var(--white);
+          margin-bottom: 15px;
+          box-sizing: border-box;
+          line-height: 130%;
+          width: 235px;
+          height: 42px;
+        }
+
+        .product-button-block {
+          .flex-center-between;
+
+
+          .product-price {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: var(--white);
+          }
+
+          .button-product {
+            width: 135px;
+            height: 50px;
+          }
+        }
+      }
+    }
+
+    .products-more-link {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 20px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 1px solid var(--black);
+      color: var(--white);
+      margin-top: 21px;
+
+      &:hover {
+        border-bottom: 1px solid var(--white);
+      }
+    }
+  }
+}
+
+.order {
+  .order-container {
+    padding: 136px 0 80px 0;
+
+    .order-title {
+      margin-bottom: 60px;
+    }
+
+    .order-text {
+      max-width: 592px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--white);
+      margin-bottom: 60px;
+    }
+
+    .order-image-block {
+      display: flex;
+
+      .order-inputs {
+        display: flex;
+        flex-direction: column;
+
+        .order-input {
+          border-radius: 20px;
+          padding: 10px 10px 10px 30px;
+          width: 387px;
+          height: 60px;
+          box-sizing: border-box;
+          background: var(--white);
+          color: var(--black);
+          margin-bottom: 15px;
+
+          &::placeholder {
+            font-family: var(--font-family);
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 130%;
+            color: #939393;
+          }
+        }
+
+        .button-order {
+          margin-top: 5px;
+          width: 387px;
+          height: 64px;
+        }
+      }
+
+      .order-image {
+        position: relative;
+        margin-left: 101px;
+
+        .order-main-image {
+          position: absolute;
+          top: -283px;
+          z-index: 50;
+        }
+
+        .order-movie-one {
+          position: absolute;
+          top: -265px;
+          left: 355px;
+          animation: moveUpDown 5s linear infinite;
+        }
+
+        .order-movie-two {
+          position: absolute;
+          top: 57px;
+          left: 355px;
+          animation: moveUpDown 6s linear infinite;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .footer-container {
+    padding: 20px 0 30px 0;
+    border-top: 1px solid #939393;
+    .flex-center-between;
+
+    .rights {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--white);
+    }
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0); /* Начальная позиция */
+  }
+  50% {
+    transform: translateY(25px); /* Позиция внизу */
+  }
+  100% {
+    transform: translateY(0); /* Возврат в начальную позицию */
   }
 }
